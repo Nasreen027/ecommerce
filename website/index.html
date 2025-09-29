@@ -22,7 +22,16 @@
         height: 15rem;
     }
 </style>
-<main>
+<div id="header"></div>
+<main style="margin-top: 146px;">
+    <script>
+        fetch("components/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            });
+    </script>
+
     <!-- Slider Start -->
     <div class="slider-section home-2-slider-navigation slider-active">
         <div class="container-fluid custom-container">
@@ -100,23 +109,23 @@
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <!-- Quick Shop Item Start -->
-                        
-                            <a href="shop-fullwidth.html">
-                                <div class="quick-shop-item swiper-slide js-scroll ShortFadeInUp">
-                                    <div class="quick-shop-item__image">
-                                        <a href="shop-fullwidth.html">
-                                            <!-- <img src="./adminPanel/images/category/categoryImage"
+
+                        <a href="shop-fullwidth.html">
+                            <div class="quick-shop-item swiper-slide js-scroll ShortFadeInUp">
+                                <div class="quick-shop-item__image">
+                                    <a href="shop-fullwidth.html">
+                                        <!-- <img src="./adminPanel/images/category/categoryImage"
                                                 alt="Quick Shop" width="203" height="226" loading="lazy" /> -->
-                                        </a>
-                                    </div>
-                                    <div class="quick-shop-item__content">
-                                        <h4 class="quick-shop-item__title">
-                                            <a href="shop-fullwidth.html">categoryName
-                                            </a>
-                                        </h4>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
+                                <div class="quick-shop-item__content">
+                                    <h4 class="quick-shop-item__title">
+                                        <a href="shop-fullwidth.html">categoryName
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </a>
 
                         <!-- Quick Shop Item End -->
                     </div>
@@ -153,47 +162,47 @@
             <div class="row">
 
                 <!-- Single product Start -->
-               
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-product js-scroll ShortFadeInUp scrolled">
-                            <div class="single-product__thumbnail">
-                                <div class="single-product__thumbnail--meta-3">
-                                 
-                                        <a href="wishlist.html"
-                                            data-bs-tooltip="tooltip" data-bs-placement="top" data-bs-title="Add to wishlist"
-                                            data-bs-custom-class="p-meta-tooltip" aria-label="wishlist">
-                                            <i class="lastudioicon-heart-2"></i>
-                                        </a>
-                                        <a href="login.html"
-                                            data-bs-tooltip="tooltip" data-bs-placement="top" data-bs-title="Add to wishlist"
-                                            data-bs-custom-class="p-meta-tooltip" aria-label="wishlist">
-                                            <i class="lastudioicon-heart-2"></i>
-                                        </a>
 
-                                </div>
-                                <div class="single-product__thumbnail--holder">
-                                    <a href="product-single.html">
-                                        <!-- <img src="./adminPanel/images/product/productImage"
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-product js-scroll ShortFadeInUp scrolled">
+                        <div class="single-product__thumbnail">
+                            <div class="single-product__thumbnail--meta-3">
+
+                                <a href="wishlist.html" data-bs-tooltip="tooltip" data-bs-placement="top"
+                                    data-bs-title="Add to wishlist" data-bs-custom-class="p-meta-tooltip"
+                                    aria-label="wishlist">
+                                    <i class="lastudioicon-heart-2"></i>
+                                </a>
+                                <a href="login.html" data-bs-tooltip="tooltip" data-bs-placement="top"
+                                    data-bs-title="Add to wishlist" data-bs-custom-class="p-meta-tooltip"
+                                    aria-label="wishlist">
+                                    <i class="lastudioicon-heart-2"></i>
+                                </a>
+
+                            </div>
+                            <div class="single-product__thumbnail--holder">
+                                <a href="product-single.html">
+                                    <!-- <img src="./adminPanel/images/product/productImage"
                                             alt="Product" width="344" height="370" loading="lazy" /> -->
-                                    </a>
-                                </div>
+                                </a>
                             </div>
-                            <div class="single-product__info">
-                                <div class="single-product__info--tags">
-                                    <a href="#">Plant</a>
-                                </div>
-                                <h3 class="single-product__info--title">
-                                    <a href="product-single.html">product Name
-                                    </a>
-                                </h3>
-                                <div class="single-product__info--price">
-                                    <ins>$ product Price
-                                    </ins>
-                                </div>
-                            </div>
-                            </a>
                         </div>
+                        <div class="single-product__info">
+                            <div class="single-product__info--tags">
+                                <a href="#">Plant</a>
+                            </div>
+                            <h3 class="single-product__info--title">
+                                <a href="product-single.html">product Name
+                                </a>
+                            </h3>
+                            <div class="single-product__info--price">
+                                <ins>$ product Price
+                                </ins>
+                            </div>
+                        </div>
+                        </a>
                     </div>
+                </div>
 
                 <!-- Single product End -->
 
@@ -432,5 +441,12 @@
         <!-- Footer CopyRight End -->
     </div>
 </footer>
-<link rel="stylesheet" href="components/footer.html">
-
+<div id="footer"></div>
+<main style="margin-top: 146px;">
+    <script>
+        fetch("components/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+            });
+    </script>
